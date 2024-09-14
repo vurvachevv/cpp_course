@@ -1,12 +1,16 @@
 #include <stdio.h>
 
-int main() {
-    int num;
-    scanf("%d", &num);
+int main() 
+{
+    int number;
+    scanf("%d", &number);
     
-    if (num % 2 == 0 && ((num >= 0 && num <= 20) || (num > 100 && num < 200))) {
+    if (number % 2 == 0 && ((number >= 0 && number <= 20) || (number > 100 && number < 200))) 
+    {
         printf("Yes\n");
-    } else {
+    } 
+    else 
+    {
         printf("No\n");
     }
 
