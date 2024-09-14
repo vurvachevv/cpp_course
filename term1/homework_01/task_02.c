@@ -3,7 +3,7 @@
 int main() 
 {
     int a, b, c;
-    scanf("%d %d %d", &a, &b, &c);
+    scanf("%i %i %i", &a, &b, &c);
 
     int isConsecutive = (b == a + 1 && c == b + 1) || (b == a - 1 && c == b - 1);
     int isIncreasing = a < b && b < c;
