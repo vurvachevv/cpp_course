@@ -5,28 +5,28 @@ int main()
     int a, b, c;
     scanf("%i %i %i", &a, &b, &c);
 
-    int isConsecutive = (b == a + 1 && c == b + 1) || (b == a - 1 && c == b - 1);
-    int isIncreasing = a < b && b < c;
-    int isDecreasing = a > b && b > c;
-    int isEqual = a == b && b == c;
+    int Consecutive = (b == a + 1 && c == b + 1) || (b == a - 1 && c == b - 1);
+    int Increasing = a < b && b < c;
+    int Decreasing = a > b && b > c;
+    int Equal = a == b && b == c;
 
-    if (isConsecutive) 
+    if (Consecutive) 
     {
         printf("Consecutive ");
     }
-    if (isIncreasing) 
+    if (Increasing) 
     {
         printf("Increasing");
     }
-    if (isDecreasing) 
+    if (Decreasing) 
     {
         printf("Decreasing ");
     }
-    if (isEqual) 
+    if (Equal) 
     {
         printf("Equal");
     }
-    if (!isConsecutive && !isIncreasing && !isDecreasing && !isEqual) 
+    if (!Consecutive && !Increasing && !Decreasing && !Equal) 
     {
         printf("None");
     }
