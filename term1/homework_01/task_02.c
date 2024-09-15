@@ -3,6 +3,7 @@
 int main() 
 {
     int a, b, c;
+    printf("Введите три числа: ");
     scanf("%i %i %i", &a, &b, &c);
 
     int Consecutive = (b == a + 1 && c == b + 1) || (b == a - 1 && c == b - 1);

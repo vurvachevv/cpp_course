@@ -19,5 +19,5 @@ int main()
         }
     }
 
-    printf("%d", min);
+    printf("Минимальное число: %d", min);
 }

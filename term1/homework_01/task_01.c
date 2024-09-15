@@ -2,14 +2,15 @@
 
 int main() 
 {
-    int number;
-    scanf("%i", &number);
-    if (number % 2 == 0 && ((number >= 0 && number <= 20) || (number > 100 && number < 200))) 
+    int num;
+    printf("Введите число: ");
+    scanf("%d", &num);
+    if (num % 2 == 0 && ((num >= 0 && num <= 20) || (num > 100 && num < 200))) 
     {
-        printf("Yes\n");
+        printf("Yes");
     } 
     else 
     {
-        printf("No\n");
+        printf("No");
     }
 }
