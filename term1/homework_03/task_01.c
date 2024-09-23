@@ -8,5 +8,4 @@ int cube(int num)
 int main() 
 {
     printf("%i\n", cube(5));
-    return 0;
 }
