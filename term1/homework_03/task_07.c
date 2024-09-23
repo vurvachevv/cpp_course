@@ -23,7 +23,6 @@ int main()
     int size2 = 4;
     printf("%d\n", count_even(array2, size2));
 
-    // Тест 3
     int array3[] = {10, 1, 1};
     int size3 = 3;
     printf("%d\n", count_even(array3, size3));
