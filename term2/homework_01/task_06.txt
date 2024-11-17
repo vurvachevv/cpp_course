@@ -1,0 +1,35 @@
+1)cat(10) → Int
+
+2)cat(10LL) → Long Long
+
+3)cat(static_cast<short>(10)) → Char
+
+4)cat(a + b) → Char
+
+5)cat(1.0f) → Error
+
+6)dog(a) → Ref
+
+7)dog(a) → CRef
+
+8)dog(10) → Ref
+
+9)dog(static_cast<int>(a)) → Ref
+
+10)dog(static_cast<int&>(a)) → Ref
+
+11)dog(+a) → Ref
+
+12)dog(func()) → CRef
+
+13)cow(a) → C-string
+
+14)cow(a) → std::string
+
+15)cow("Hello") → C-string
+
+16)cow(std::string("Hello")) → std::string
+
+17)cow("Hello"s) → std::string
+
+18)cow(a.c_str()) → C-string
