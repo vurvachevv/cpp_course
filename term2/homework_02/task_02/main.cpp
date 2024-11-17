@@ -1,39 +1,41 @@
 #include <iostream>
-#include "complex.hpp"
+#include "vector2f.hpp"
 
 using std::cout, std::cin, std::endl;
 
-// Тут мы тестируем нашу реализацию комплексных чисел
-
-int main() 
+int main()
 {
-    Complex a;
-    Complex b;
-    
-    cin >> a >> b;
+    Vector2f v1, v2;
 
-    cout << "a      = "  << a      << endl 
-         << "b      = "  << b      << endl 
-         << "a + b  = "  << a + b  << endl 
-         << "a - b  = "  << a - b  << endl 
-         << "a * b  = "  << a * b  << endl 
-         << "a / b  = "  << a / b  << endl 
-         << "-a     = "  << -a     << endl 
-         << "+a     = "  << +a     << endl 
-         << "*a     = "  << *a     << endl
-         << "a + 5  = "  << a + 5  << endl
-         << "5 + a  = "  << 5 + a  << endl
-         << "a * 5  = "  << a * 5  << endl
-         << "5 * a  = "  << 5 * a  << endl
-         << "Exp(a) = "  << exp(a) << endl
-         << "Sin(a) = "  << sin(a) << endl
-         << "Cos(a) = "  << cos(a) << endl
-         << "Exp((a + b) / a) * Cos(a - b) = "  << exp((a + b) / a) * cos(a - b) << endl;
+    cout << "Enter vector v1 (x y): ";
+    cin >> v1;
+    cout << "Enter vector v2 (x y): ";
+    cin >> v2;
 
-    a += b;
-    cout << "a += b; a = " << a << endl;
+    cout << "v1 = " << v1 << endl;
+    cout << "v2 = " << v2 << endl;
 
-    // Оператор = мы не перегружали, но это всё равно работает
-    b = a;
-    cout << "b = a; b = " << b << endl;
+    cout << "v1 + v2 = " << v1 + v2 << endl;
+    cout << "v1 - v2 = " << v1 - v2 << endl;
+
+    float scalar = 2.0f;
+    cout << "v1 * " << scalar << " = " << v1 * scalar << endl;
+
+    cout << "v1 * v2 (dot product) = " << v1 * v2 << endl;
+
+    cout << "-v1 = " << -v1 << endl;
+    cout << "+v1 = " << +v1 << endl;
+
+    cout << "v1 == v2? " << (v1 == v2 ? "Yes" : "No") << endl;
+    cout << "v1 != v2? " << (v1 != v2 ? "Yes" : "No") << endl;
+
+    v1 += v2;
+    cout << "v1 += v2; v1 = " << v1 << endl;
+
+    v1 -= v2;
+    cout << "v1 -= v2; v1 = " << v1 << endl;
+
+    v1 *= scalar;
+    cout << "v1 *= " << scalar << "; v1 = " << v1 << endl;
+
 }
