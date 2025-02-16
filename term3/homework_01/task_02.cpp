@@ -39,14 +39,13 @@ int main() {
                 window.close();
         }
 
-        // Обновление позиций шариков
         for (auto& ball : balls) {
             sf::Vector2f force(0.0f, 0.0f);
             for (auto& other : balls) {
                 if (&ball == &other) continue;
 
                 float dist = distance(ball.shape.getPosition(), other.shape.getPosition());
-                if (dist < 20.0f) continue;  // Игнорируем слишком близкие шарики
+                if (dist < 20.0f) continue;
 
                 float f = (ball.charge * other.charge) / dist;
                 sf::Vector2f direction = other.shape.getPosition() - ball.shape.getPosition();
@@ -58,7 +57,6 @@ int main() {
             ball.shape.move(ball.velocity);
         }
 
-        // Обработка столкновений со стенками
         for (auto& ball : balls) {
             sf::Vector2f pos = ball.shape.getPosition();
             if (pos.x < 0 || pos.x > 800 - 20) ball.velocity.x *= -1;
