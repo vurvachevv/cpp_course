@@ -66,5 +66,4 @@ int main()
     else
         cout << "No, a isn't colliding b" << endl;
 
-    return 0;
 }
