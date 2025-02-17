@@ -1,14 +1,20 @@
 #include <SFML/Graphics.hpp>
+'''Вращающийся квадрат'''
 
-int main() {
+int main()
+{
     sf::RenderWindow window(sf::VideoMode(800, 600), "Rotating Square");
+    window.setFramerateLimit(60);
+
     sf::RectangleShape square(sf::Vector2f(100.0f, 100.0f));
     square.setFillColor(sf::Color::Green);
     square.setPosition(350.0f, 250.0f);
 
-    while (window.isOpen()) {
+    while (window.isOpen())
+    {
         sf::Event event;
-        while (window.pollEvent(event)) {
+        while (window.pollEvent(event))
+        {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
@@ -20,5 +26,4 @@ int main() {
         window.display();
     }
 
-    return 0;
 }
